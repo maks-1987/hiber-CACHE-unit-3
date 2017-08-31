@@ -1,10 +1,8 @@
 package org.hibernate.dto;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
-
 public class UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;
