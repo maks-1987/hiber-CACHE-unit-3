@@ -1,8 +1,10 @@
 package org.hibernate.dto;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
+@org.hibernate.annotations.Entity(selectBeforeUpdate = true)
 public class UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;

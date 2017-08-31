@@ -7,22 +7,28 @@ import java.util.Date;
 
 public class HibernateTest {
     public static void main(String[] args) {
-
-        UserDetails user = new UserDetails();
-        user.setUserName("Test_User");
+        //UserDetails user = new UserDetails();
+        //user.setUserName("Test_User");
 
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-
-        session.save(user);
-        user.setUserName("Updated_User");
-        user.setUserName("Updated_User_Again");
-
+        UserDetails user = (UserDetails) session.get(UserDetails.class, 1);
+        //session.save(user);
+        //user.setUserName("Updated_User");
+        //user.setUserName("Updated_User_Again");
         session.getTransaction().commit();
         session.close();
 
-        user.setUserName("Updated_User_After_Close");
+        user.setUserName("Change name");
+
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.update(user);
+        //user.setUserName("Change After Update");
+        session.getTransaction().commit();
+        session.close();
+
     }
 }
