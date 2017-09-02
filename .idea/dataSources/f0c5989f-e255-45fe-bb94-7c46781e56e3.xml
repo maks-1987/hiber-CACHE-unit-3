@@ -19,103 +19,118 @@
     <table id="13" parent="2" name="twowheeler"/>
     <table id="14" parent="2" name="user_details"/>
     <table id="15" parent="2" name="user_details_vehicle"/>
-    <table id="16" parent="2" name="vehicle"/>
-    <column id="17" parent="11" name="SteeringWheel">
+    <table id="16" parent="2" name="userdetails"/>
+    <table id="17" parent="2" name="vehicle"/>
+    <column id="18" parent="11" name="SteeringWheel">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="18" parent="11" name="vehicleId">
+    <column id="19" parent="11" name="vehicleId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="19" parent="11" name="PRIMARY">
+    <key id="20" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>vehicleId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="20" parent="11" name="FK841kcsmxob9iskq0e5yrw856p">
+    <foreign-key id="21" parent="11" name="FK841kcsmxob9iskq0e5yrw856p">
       <ColNames>vehicleId</ColNames>
       <RefSchemaName>mydbtest</RefSchemaName>
       <RefTableName>vehicle</RefTableName>
       <RefColNames>vehicleId</RefColNames>
     </foreign-key>
-    <column id="21" parent="12" name="next_val">
+    <column id="22" parent="12" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="22" parent="13" name="SteeringHandle">
+    <column id="23" parent="13" name="SteeringHandle">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="23" parent="13" name="vehicleId">
+    <column id="24" parent="13" name="vehicleId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="24" parent="13" name="PRIMARY">
+    <key id="25" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>vehicleId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="25" parent="13" name="FKjn7iwtd1u4wbxkswumfxw2ng7">
+    <foreign-key id="26" parent="13" name="FKjn7iwtd1u4wbxkswumfxw2ng7">
       <ColNames>vehicleId</ColNames>
       <RefSchemaName>mydbtest</RefSchemaName>
       <RefTableName>vehicle</RefTableName>
       <RefColNames>vehicleId</RefColNames>
     </foreign-key>
-    <column id="26" parent="14" name="userId">
+    <column id="27" parent="14" name="userId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="14" name="userName">
+    <column id="28" parent="14" name="userName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="28" parent="14" name="PRIMARY">
+    <key id="29" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="15" name="UserDetails_userId">
+    <column id="30" parent="15" name="UserDetails_userId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="15" name="vehicle_vehicleId">
+    <column id="31" parent="15" name="vehicle_vehicleId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="31" parent="15" name="FKbdrxqw3j8dovf9npdkrfkpc3u">
+    <index id="32" parent="15" name="FKbdrxqw3j8dovf9npdkrfkpc3u">
       <ColNames>UserDetails_userId</ColNames>
     </index>
-    <index id="32" parent="15" name="FKd6kp2c4oltmpsg6g9d8u15ymw">
+    <index id="33" parent="15" name="FKd6kp2c4oltmpsg6g9d8u15ymw">
       <ColNames>vehicle_vehicleId</ColNames>
     </index>
-    <foreign-key id="33" parent="15" name="FKbdrxqw3j8dovf9npdkrfkpc3u">
+    <foreign-key id="34" parent="15" name="FKbdrxqw3j8dovf9npdkrfkpc3u">
       <ColNames>UserDetails_userId</ColNames>
       <RefSchemaName>mydbtest</RefSchemaName>
       <RefTableName>user_details</RefTableName>
       <RefColNames>userId</RefColNames>
     </foreign-key>
-    <foreign-key id="34" parent="15" name="FKd6kp2c4oltmpsg6g9d8u15ymw">
+    <foreign-key id="35" parent="15" name="FKd6kp2c4oltmpsg6g9d8u15ymw">
       <ColNames>vehicle_vehicleId</ColNames>
       <RefSchemaName>mydbtest</RefSchemaName>
       <RefTableName>vehicle</RefTableName>
       <RefColNames>vehicleId</RefColNames>
     </foreign-key>
-    <column id="35" parent="16" name="vehicleId">
+    <column id="36" parent="16" name="userId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="16" name="vehicleName">
+    <column id="37" parent="16" name="userName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="37" parent="16" name="PRIMARY">
+    <key id="38" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="17" name="vehicleId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="17" name="vehicleName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="41" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>vehicleId</ColNames>
       <Primary>1</Primary>
