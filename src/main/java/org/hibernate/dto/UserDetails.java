@@ -1,13 +1,12 @@
 package org.hibernate.dto;
 
 //import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name="UserDetails.byId", query = "from UserDetails where userId = ?")
+//@NamedNativeQuery(name="UserDetails.byName", query = "select * from User_Details where username = ?", resultClass = UserDetails.class)
+@Table(name = "User_Details")
 @org.hibernate.annotations.Entity(selectBeforeUpdate=true)
 public class UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
