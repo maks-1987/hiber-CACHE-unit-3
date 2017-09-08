@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="org.ehcache.modules:ehcache-core:3.4.0" type="repository">
+    <properties maven-id="org.ehcache.modules:ehcache-core:3.4.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/ehcache/modules/ehcache-core/3.4.0/ehcache-core-3.4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ehcache/modules/ehcache-api/3.4.0/ehcache-api-3.4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/terracotta/statistics/1.4.3/statistics-1.4.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
