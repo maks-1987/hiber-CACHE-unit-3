@@ -1,12 +1,14 @@
 package org.hibernate.dto;
 
-//import javax.persistence.*;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.Cacheable;
 import javax.persistence.*;
 
 @Entity
 @Cacheable
-@org.hibernate.annotations.Cache(usage="CacheConcurrencyStrategy.READ_ONLY")
-@NamedQuery(name="UserDetails.byId", query = "from UserDetails where userId = ?")
+@org.hibernate.annotations.Cache(usage= CacheConcurrencyStrategy.READ_ONLY)//, region = "STATIC_DATA")
+@NamedQuery(name="UserDetails.byId", query ="from UserDetails where userId = ?")
 //@NamedNativeQuery(name="UserDetails.byName", query = "select * from User_Details where username = ?", resultClass = UserDetails.class)
 @Table(name = "User_Details")
 @org.hibernate.annotations.Entity(selectBeforeUpdate=true)

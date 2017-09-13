@@ -6,6 +6,7 @@ import org.hibernate.*;
 import org.hibernate.Criteria;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.dto.UserDetails;
+import org.hibernate.Query;
 
 public class HibernateTest {
     public static void main(String[] args) {
@@ -17,8 +18,9 @@ public class HibernateTest {
             user.setUserName("User " + i);
             session.save(user);
         }*/
-        Query = session.createQuery("from  UserDetails user where user.userId = 1");
+        Query query = session.createQuery("from  org.hibernate.dto.UserDetails user where user.userId = 1");
         query.setCacheable(true);
+        //query.setCacheRegion("User_Details");
         List users = query.list();
         //UserDetails user = (UserDetails) session.get(UserDetails.class, 1);
         //user.setUserName("Updated user");
@@ -46,8 +48,9 @@ public class HibernateTest {
         Session session2 = sessionFactory.openSession();
         session2.beginTransaction();
 
-        Query = session2.createQuery("from  UserDetails user where user.userId = 1");
+        Query query2 = session2.createQuery("from  UserDetails user where user.userId = 1");
         query2.setCacheable(true);
+        //query2.setCacheRegion("User_Details");
         users = query2.list();
         //UserDetails user2 = (UserDetails) session2.get(UserDetails.class, 1);
         session2.getTransaction().commit();
